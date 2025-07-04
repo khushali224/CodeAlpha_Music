@@ -1,1 +1,1 @@
-# CodeAlpha_Music
+# music-app
