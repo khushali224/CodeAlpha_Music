@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+:root {
+  --mainColor: #fff;
+  --mainDarkColor: #565454;
+  --mainDimColor: #b3b3b3;
+  --primaryAccentColor: #1db954;
+  --mainLightColor: rgba(235, 235, 235, 0.5);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+  background-color: var(--mainDarkColor);
+}
+
+.container {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--mainColor);
+  font-family: "Poppins", sans-serif;
+}
+
+.blackScreen {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  pointer-events: none;
+  background-color: rgba(17, 17, 17, 0.6);
+}
+
+.music-Container {
+  width: 350px;
+  padding: 35px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(26, 26, 26, 0.2), 0 0 30px rgba(26, 26, 26, 0.1);
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.8);
+  font-weight: 600;
+  box-shadow: 0px 5px 20px rgba(82, 230, 90, 0.8);
+}
+
+.musicPlayer {
+  margin: 0;
+  margin-bottom: 20px;
+  color: var(--primaryAccentColor);
+  font-size: 1.8rem;
+}
+
+.music-Head-Name {
+  margin: 0 auto;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.music-Artist-Name {
+  color: var(--mainDimColor);
+  margin: 4px 0;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+#songAvatar {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  margin: 20px 0;
+  position: relative;
+  cursor: pointer;
+  animation: animateAvatar 1s linear infinite;
+  border: 4px solid var(--primaryAccentColor);
+}
+
+@keyframes animateAvatar {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.musicTimerDiv {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-weight: 600;
+}
+
+.musicProgressBar {
+  width: 100%;
+  margin-bottom: 16px;
+  height: 10px;
+  border-radius: 5px;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  appearance: none;
+  transition: background-color 0.3s ease;
+}
+
+.musicProgressBar::-webkit-slider-thumb {
+  background-color: var(--primaryAccentColor);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+
+.playBtn {
+  font-size: 40px;
+  margin: 8px 10px;
+  color: var(--primaryAccentColor);
+  cursor: pointer;
+  font-weight: 400;
+  transition: transform 0.2s;
+}
+
+.playBtn:hover {
+  transform: scale(1.1);
+}
+
+.musicControler {
+  cursor: pointer;
+  font-size: 32px;
+  color: var(--mainColor);
+  transition: transform 0.2s ease;
+}
+
+.musicControler:hover {
+  transform: scale(1.1);
+}
+
+.musicControlers {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+}
